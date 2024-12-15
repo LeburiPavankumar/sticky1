@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat Sticky UI</title>
+    <!-- Font Awesome for Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #0c0b0b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        
+        .chat-interface {
+            width: 400px;
+            height: 550px;
+            background-color: #0f0e0fea;
+            border-radius: 0px;
+            box-shadow: 0 10px 5px rgb(13, 247, 247);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; /* Prevent any overflow */
+            position:sticky;
+        }
+
+        
+        .chat-header {
+            background-color: #11f8edf1;
+            color: rgb(10, 0, 0);
+            display: flex;
+            /* padding: 10px 20px; */
+            font-size: 15px;
+            position: sticky;
+            top: 0;
+            z-index: ;
+        }
+        .button {
+      width: 70px; 
+      height: 50px; 
+      background-color: #0b218fb9; 
+      border: 2px solid rgb(53, 53, 66); 
+      border-radius:300px; 
+      box-shadow: 0 8px 6px rgba(15, 0, 0, 0.979);
+      margin: 0px auto; 
+      font-style:italic;
+      text-align: center;
+      padding-bottom:50px;
+      
+    }
+    .button h2 {
+      color: rgba(232, 236, 213, 0.959); 
+      font-size:30px; 
+      /* margin: 10;  */
+    }
+        /* .chat-header .icons i 
+            color: hsl(9, 100%, 1%);
+            margin-left:50px;
+            cursor:pointer;
+            font: size 100px; */
+        
+
+       
+        .chat-container {
+            flex: 3;
+            background-color: #19e0faa2;
+            overflow-y: scroll; 
+            padding: 0px;
+        }
+        
+        .message {
+            max-width: 60%;
+            margin: 10px;
+            padding: 2px 05px;
+            border-radius: 20px;
+            font-size: 12px;
+            line-height: 2.5rem;
+            word-wrap: break-word;
+        }
+        
+        .sent {
+            background-color: #b1f854fa;
+            margin-left: auto;
+            text-align: right;
+            box-shadow:0 4px 8px rgba(17, 20, 17, 0.979)
+        }
+
+        .received {
+            background-color: rgba(250, 2, 217, 0.973);
+            margin-right: auto;
+            text-align: left;
+            box-shadow: 0 5px 5px rgba(59, 2, 2, 0.842);
+        }
+        .date-separator {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            font-size: 0.8rem;
+            font-weight: bold;
+            background-color: #abddd9;
+            position: sticky;
+            top:20px;
+            box-shadow:#f81717;
+        }
+
+
+        .date-separator::before,
+        .date-separator::after {
+            content:"";
+            flex: 1;
+            height: 09px;
+            background-color: #eee3e3;
+            margin: 0 10px;
+        } 
+
+
+        
+        .chat-footer {
+            background-color: #ff0101;
+            padding: 05px 1px;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            bottom: 0;
+            z-index: 2;
+            border-top: 1px solid #ddd;
+        }
+
+        .chat-footer input {
+            flex: 1;
+            padding: px 18px;
+            border: 1px solid #0c71f5;
+            border-radius: 1px;
+            outline:solid;
+        }
+
+        .chat-footer button {
+            background-color: #01fcbdf5;
+            color: white;
+            border:none;
+            margin-left: 0px;
+            padding: 08px 4px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .footer-icons {
+    font-size: 35px;
+    padding: 0 05px;
+}
+        .chat-footer button i {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="chat-interface">
+        
+        <div class="chat-header">
+            <button class="button"><h2>BE CHAT</h2></button>
+               
+            
+                <i class="fas fa-phone">Call</i>
+                <i class="fa fa-message">SMS</i>
+                <i class="fas fa-video">VC</i>
+                <i class="fas fa-images">MEDIA</i>
+                
+    
+            
+        </div>
+
+        
+        <div class="chat-container">
+            
+
+        <div class="messages">
+                <div class="message received">Hi!</div>
+                <div class="message sent">hello how are you</div>
+                
+                
+
+
+              
+            <div class="date-separator">Yesterday</div>  
+            
+            
+
+
+                <div class="message received">I'm doing well. Are you free to talk now?</div>
+                <div class="message sent">Yes, absolutely!</div>
+                <div class="message received">nice to here </div>
+                <div class="message sent">ok!</div>
+                <div class="message received">what are you doing ?</div>
+                <div class="message sent">iam eating some snacks</div>
+                <div class="message received">what snacks are you eating</div>
+                <div class="message sent">KFC chicken</div>
+                <div class="message received">wow so good enjoy!</div>
+                
+                
+            <div class="date-separator">Today</div>
+                
+                <div class="message sent">when you are complete message me</div>
+                <div class="message received">ok but no problem you can message me!</div>
+                <div class="message sent">ok thats sounds good</div>
+                <div class="message received">Hmm </div>
+                <div class="message sent">where are you now</div>
+                <div class="message received">At home why?</div>
+                <div class="message sent">just casually asking</div>
+                <div class="message received">oh its ok</div>
+                <div class="message sent">did you get any proposals in college days or present time</div>
+                <div class="message received">in college days so many members proposed to me but ididn't accepted to anyone </div>
+                <div class="message sent">wow nice to hear but they are feel very sadly at that time</div>
+                <div class="message received">yes i know that situation but ididn't get propper information </div>
+                <div class="message sent">ok what else</div>
+                <div class="message received">Do you have gf?</div>
+                <div class="message sent">NO iam single but past i haved </div>
+                <div class="message received">ok what happened that girl</div>
+                <div class="message sent">that girl is cheated me and she is money minded</div>
+                <div class="message received">ok did you rembering that girl at present </div>
+                <div class="message sent">no iam forgotten iam perfectly alright</div>
+                <div class="message received">Really thats good she doesnt know your value ok dont feel</div>
+                <div class="message sent">ok thank you for supporting me</div>
+                <div class="message received">no mention</div>
+                
+                 
+               
+            <div class="date-separator">Yesterday</div>  
+
+                <div class="message sent">iwill ask one thing </div>
+                <div class="message received">ok ask </div>
+                <div class="message sent">what is your opinion about me</div>
+                <div class="message received">your nice guy </div>
+                <div class="message sent">Really thanks a lot</div>
+                <div class="message received">hmm say opinion of me</div>
+                <div class="message sent">your kind hearted and understanding minded</div>
+                <div class="message received">thank you </div>
+                <div class="message sent">your welcome and shall we can be start relationship Each other </div>
+                <div class="message received">of course why not</div>
+                <div class="message sent">thank you do you like me</div>
+                <div class="message received">yes></div>
+                <div class="message sent">i love you i miss you dear></div>
+                <div class="message received">you too></div>
+                <div class="message sent">thank you for accepting me></div>
+                <div class="message received">ok ></div>
+                <div class="message sent">when we meet each other </div>
+                <div class="message received">idont know </div>
+                <div class="message sent">ok when you are available we can meet</div>
+                <div class="message received">yaa sure</div>
+               
+               <!-- Date Separator -->
+            <div class="date-separator">Today</div>
+               
+                <div class="message sent">ok tell me what else </div>
+                <div class="message received">we can chat later</div>
+                <div class="message sent">why what happened</div>
+                <div class="message received">some one is calling me </div>
+                <div class="message sent">ok take care </div>
+                <div class="message received">ok BYE see you later</div>
+                <div class="message sent">Ok bye iwill wait for you </div>
+                <div class="message received">ok </div>
+                
+    
+    
+    
+    
+    
+         </div>
+         
+         
+        <div class="chat-footer">
+            <div class="footer-icons">
+                😊 
+            </div>
+        
+        <div class="chat-footer">
+            <input type="text" placeholder="Type a message..." />
+            <div class="footer-icons">
+                🎙 
+                📎 
+            </div>
+            <button><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+</body>
+</html>
